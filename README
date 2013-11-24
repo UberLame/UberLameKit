@@ -1,0 +1,16 @@
+# 2013-11-24
+
+UberLameKit, the following dependecies are required to function:
+
++ bcrypt + crypt + optparse + thread
+
+file > master.py
+
+-E <engine>
+* unhash
+-D <dictionary>
+-T <target file>
+
+IE: To begin cracking with unhash
+./master.py -E unhash -D dictionary.txt -T salt.txt
+
