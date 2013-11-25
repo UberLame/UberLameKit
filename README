@@ -17,8 +17,8 @@ Currently this program has the ability to: brute force algorithms, brute force t
 -H <target hostname>
 -A <attack type>
 
-IE: To begin cracking with unhash
+IE: To begin cracking encrypted passwords with unhash
 ./master.py -E unhash -D dictionary.txt -T salt.txt
 
-IE: To begin brute forcing with ssh
+IE: To begin brute forcing with secure shell accounts
 ./master.py -E bruteforce -A ssh -U root -D dictionary.txt
