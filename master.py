@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import optparse as theparser
-from lib.zHash import *
+from lib.checkhash import *
 
 def main():
 	parser = theparser.OptionParser("%prog stuff")
@@ -15,7 +15,7 @@ def main():
 	myTarg = options.myTarg
 
 	if (myEngi == 'unhash'):
-		x = Unhash().checkMe(myTarg, myDict, 'auto')
+		x = Unhash().checkMe(myTarg, myDict)
 
 
 if __name__ == '__main__':
