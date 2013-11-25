@@ -2,13 +2,15 @@
 
 UberLameKit, the following dependecies are required to function:
 
-+ bcrypt + crypt + optparse + thread + 
++ bcrypt + crypt + optparse + thread + pexpect +
 
 file > master.py
 
+Currently this program has the ability to: brute force algorithms, brute force tcp services, etc
+
 -E <engine>
-* unhash
-* bruteforce
+	* unhash
+	* bruteforce
 -D <dictionary>
 -T <target file>
 -U <target username>
