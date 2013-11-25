@@ -14,7 +14,7 @@ class Unhash:
 		nSha256 = 0
 		nDes = 0
 
-		print "\r[*] Preparing encrypted files for threading\r"
+		print "\r[*] Preparing encrypted passwords for threading\r"
 	        passFile = open(cryptFile)
         	for line in passFile.readlines():
 	                if ":" in line:
