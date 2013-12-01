@@ -2,7 +2,7 @@
 
 UberLameKit, the following dependecies are required to function:
 
-+ bcrypt + crypt + optparse + thread + pexpect +
++ Python 2.6x + bcrypt + crypt + optparse + thread + pexpect +
 
 file > master.py
 
