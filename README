@@ -22,3 +22,6 @@ IE: To begin cracking encrypted passwords with unhash
 
 IE: To begin brute forcing with secure shell accounts
 ./master.py -E bruteforce -A ssh -U root -D dictionary.txt
+
+IE: To begin brute forcing with ftp accounts
+./mastery.py -E bruteforce -A ftp -U root -D dictionary.txt
